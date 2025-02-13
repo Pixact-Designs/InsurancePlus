@@ -9,7 +9,11 @@ export default function Future(){
         'Chat With Us',
         'Get a Free, Tailored Quote'
 
-    ]
+    ];
+
+    const whatsappNumber = process.env.WHATSAPP_NUMBER; 
+    const message = encodeURIComponent("Hello, I'm interested in your insurance services!");
+
     return (
         <>
          <section className="m-4 p-8 flex flex-col md:flex-row items-center gap-8">
@@ -30,11 +34,16 @@ export default function Future(){
                 <p className='text-lg text-slate-600 font-medium'>
                 No back-and-forth emails. No wasted time. Just instant connection with our insurance experts who’ll help you find the perfect coverage.            
                 </p>
-
+                <a 
+                    href={`https://wa.me/${whatsappNumber}?text=${message}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
                  <button className="border-2 border-transparent hover:bg-white hover:text-slate-900 hover:border-2 hover:border-slate-900 my-4 flex justify-center items-center bg-slate-900 p-4 rounded w-72 text-white mx-auto sm:mx-0">
                     <FaWhatsapp className="mr-2 text-xl" />
                     Chat Now
                  </button>
+                 </a>
 
                 </div>
             <div className="relative w-full md:w-1/2 flex justify-center ">

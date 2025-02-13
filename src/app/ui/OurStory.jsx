@@ -5,7 +5,7 @@ import Future from "./Future";
 export default function OurStory() {
     return (
         <>
-        <section className="m-4 p-4 flex flex-col ">
+        <section id="our-story" className="m-4 p-4 flex flex-col ">
             <h1 className="md:text-5xl text-3xl flex justify-center font-bold">
                 Our Story
             </h1>

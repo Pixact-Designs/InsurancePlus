@@ -4,7 +4,7 @@ import about from '@/public/about.png'
 export default function About() {
     return (
         <>
-        <section className="m-4 p-8 flex flex-col md:flex-row items-center gap-8">
+        <section id="about" className="m-4 p-8 flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2">
                 <h1 className='font-bold text-3xl md:text-5xl my-4'>Who We Are</h1>
                 <p className='text-lg text-slate-600 font-medium'>

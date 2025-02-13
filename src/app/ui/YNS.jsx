@@ -1,9 +1,12 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function YNS(){
+    const whatsappNumber = process.env.WHATSAPP_NUMBER; 
+    const message = encodeURIComponent("Hello, I'm interested in your insurance services!");
+
     return(
         <>
-              <section className="m-4 p-4 flex flex-col ">
+              <section id="next-step" className="m-4 p-4 flex flex-col ">
             <h1 className="md:text-5xl text-3xl flex justify-center font-bold">
                 Your Next Step
             </h1>
@@ -14,11 +17,16 @@ export default function YNS(){
             Click the button below to start your WhatsApp conversation with InsurancePlus.
             </p>
                 <div className="mx-auto">
-
+            <a 
+                    href={`https://wa.me/${whatsappNumber}?text=${message}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
              <button className="border-2 border-transparent bg-[#00ADEA] hover:bg-white hover:text-[#00ADEA] hover:border-2 hover:border-[#00ADEA] my-4 flex justify-center items-center p-4 rounded w-72 text-white mx-auto sm:mx-0">
                 <FaWhatsapp className="mr-2 text-xl" />
                 WhatsApp Now
              </button>
+             </a>
                 </div>
         </section>
         </>
