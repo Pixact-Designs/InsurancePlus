@@ -1,20 +1,37 @@
+"use client";
+
 import automobile from '@/public/automobile.png'
 import Image from 'next/image'
+import { motion } from "framer-motion"
+
 export default function Automobiles(){
     return(
         <>
         <section className="m-4 p-8 flex flex-col md:flex-row items-center gap-8">
                     <div className="w-full md:w-1/2">
-                        <h1 className='font-bold text-3xl md:text-5xl my-4'>Specialized in 
+                        <motion.h1 className='font-bold text-3xl md:text-5xl my-4'
+                         initial={{ x: -100, opacity: 0 }}
+                         whileInView={{ x: 0, opacity: 1 }}
+                         transition={{ duration: 1.5, ease: "easeOut" }}
+                         viewport={{ once: true }}>Specialized in 
                             <span className='text-[#00ADEA] font-bold text-3xl md:text-5xl my-4 ml-2 '>
                                 Automobiles
                             </span>
-                            </h1>
-                        <p className='text-lg text-slate-600 font-medium'>
-                        We’re passionate about getting you on the road fully covered. Count on us for the best deals and expert advice for your vehicles, whether you’re driving family sedans or managing a fleet.                        </p>
+                            </motion.h1>
+                        <motion.p className='text-lg text-slate-600 font-medium'
+                         initial={{ y: 50, opacity: 0 }}
+                         whileInView={{ y: 0, opacity: 1 }}
+                         transition={{ duration: 1.5, ease: "easeOut" }}
+                         viewport={{ once: true }}>
+                        We’re passionate about getting you on the road fully covered. Count on us for the best deals and expert advice for your vehicles, whether you’re driving family sedans or managing a fleet.                        
+                        </motion.p>
                         
                     </div>
-                    <div className="relative w-full md:w-1/2 flex justify-center">
+                    <motion.div className="relative w-full md:w-1/2 flex justify-center"
+                     initial={{ x: 100, opacity: 0 }}
+                     whileInView={{ x: 0, opacity: 1 }}
+                     transition={{ duration: 1.5, ease: "easeOut" }}
+                     viewport={{ once: true }}>
                      <div 
                         className="absolute bg-black/40 rounded-full blur-xl"
                         style={{
@@ -34,7 +51,7 @@ export default function Automobiles(){
                         height={694}
                         alt="automobile"
                         />
-                    </div>
+                    </motion.div>
                 </section>
         </>
     )

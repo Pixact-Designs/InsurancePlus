@@ -1,5 +1,7 @@
+
 import About from "./ui/About";
 import Footer from "./ui/Footer";
+import Future from "./ui/Future";
 import Header from "./ui/Header";
 import NavBar from "./ui/NavBar";
 import OurStory from "./ui/OurStory";
@@ -14,6 +16,7 @@ export default function Home() {
      <About/>
      <WCU/>
      <OurStory/>
+     <Future/>
      <YNS/>
     <Footer/>
      

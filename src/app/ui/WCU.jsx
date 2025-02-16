@@ -1,3 +1,4 @@
+"use client";
 import AIO from "./AIO";
 import Automobiles from "./Automobiles";
 import Contact from "./Contact";
